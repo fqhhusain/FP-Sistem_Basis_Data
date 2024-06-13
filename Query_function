@@ -21,3 +21,25 @@ BEGIN
 END //
 
 DELIMITER ;
+
+-------------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE TampilkanPesertaDenganTagihanBelumLunas()
+BEGIN
+    SELECT
+        p.id_peserta,
+        p.Nama AS Nama_Peserta,
+        pi.Jumlah_pembayaran AS Tagihan_Belum_Lunas
+    FROM
+        Peserta p
+    LEFT JOIN
+        Pembayaran_Iuran pi ON p.id_peserta = pi.id_peserta
+    WHERE
+        pi.Status_pembayaran_lunas = FALSE;
+END$$
+
+DELIMITER ;
+
+CALL TampilkanPesertaDenganTagihanBelumLunas();
