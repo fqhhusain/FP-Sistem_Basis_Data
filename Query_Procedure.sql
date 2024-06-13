@@ -158,5 +158,17 @@ END //
 DELIMITER ;
 
 CALL TambahAntrean(1, 123, 'Sakit kepala');
+----------------------------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE TampilkanSemuaPeserta()
+BEGIN
+    SELECT * FROM Peserta;
+END$$
+
+DELIMITER ;
+
+CALL TampilkanSemuaPeserta();
 
 
