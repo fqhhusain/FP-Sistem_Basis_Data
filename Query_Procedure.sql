@@ -157,4 +157,6 @@ END //
 
 DELIMITER ;
 
+CALL TambahAntrean(1, 123, 'Sakit kepala');
+
 
