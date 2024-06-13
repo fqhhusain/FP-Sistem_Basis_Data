@@ -47,7 +47,7 @@ INSERT INTO Jadwal_Operasi (Kode_Operasi, Jadwal_pelaksanaan, ID_faskes, Tenaga_
 (4003, '2024-06-14', 3, 'Dr. Mahendra', 'Pediatri', 103),
 (4004, '2024-06-16', 1, 'Dr. Budi', 'Kardiologi', 104),
 (4005, '2024-06-18', 4, 'Dr. Susilo', 'Ortopedi', 105),
-(4006, '2024-06-20', 5, 'Dr. Sari', 'Dermat
+(4006, '2024-06-20', 5, 'Dr. Sari', 'Dermatologi', 106);
 
 
 INSERT INTO Tempat_tidur (ID_kamar, Tipe_kamar, Status_ketersediaan, Last_update, id_faskes) VALUES
