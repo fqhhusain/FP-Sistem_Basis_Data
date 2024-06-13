@@ -1,17 +1,23 @@
+-- Create a function to calculate total unpaid bills
+DELIMITER //
+
 CREATE FUNCTION total_tagihan_belum_lunas()
 RETURNS DECIMAL(10, 2)
 BEGIN
     DECLARE total DECIMAL(10, 2);
 
+    -- Calculate total unpaid bills
     SELECT SUM(Jumlah_pembayaran)
     INTO total
     FROM Pembayaran_Iuran
     WHERE Status_pembayaran_lunas = FALSE;
 
- 
+    -- Return total unpaid bills
     IF total IS NULL THEN
-        SET total = 0.00; 
+        SET total = 0.00; -- If there are no unpaid bills, return 0
     END IF;
 
     RETURN total;
-END;
+END //
+
+DELIMITER ;
