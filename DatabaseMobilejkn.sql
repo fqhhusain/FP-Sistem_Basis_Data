@@ -1,11 +1,24 @@
-    INSERT INTO Faskes (id_faskes, Nama, Tipe_fasilitas, Jarak, Alamat, Telepon) VALUES
+INSERT INTO Faskes (id_faskes, Nama, Tipe_fasilitas, Jarak, Alamat, Telepon) VALUES
 (1, 'RS Harapan Kita', 'Rumah Sakit', 5, 'Jl. Harapan No. 1', '0211234567'),
 (2, 'Puskesmas Sehat', 'Puskesmas', 3, 'Jl. Sehat No. 12', '0217654321'),
 (3, 'Klinik Keluarga', 'Klinik', 2, 'Jl. Keluarga No. 7', '0213344556'),
 (4, 'RS Medika Utama', 'Rumah Sakit', 10, 'Jl. Utama No. 45', '0212233445'),
 (5, 'Puskesmas Harapan', 'Puskesmas', 7, 'Jl. Harapan No. 22', '0217788990'),
-(6, 'Klinik Sejahtera', 'Klinik', 4, 'Jl. Sejahtera No. 10', '0214455667');
-
+(6, 'Klinik Sejahtera', 'Klinik', 4, 'Jl. Sejahtera No. 10', '0214455667'),
+(7, 'RS Umum Daerah', 'Rumah Sakit', 12, 'Jl. Umum No. 5', '0215566778'),
+(8, 'Puskesmas Sukajadi', 'Puskesmas', 8, 'Jl. Sukajadi No. 13', '0219988776'),
+(9, 'Klinik Medika', 'Klinik', 6, 'Jl. Medika No. 4', '0216677889'),
+(10, 'RS Bunda', 'Rumah Sakit', 15, 'Jl. Bunda No. 9', '0213344777'),
+(11, 'Puskesmas Sukamaju', 'Puskesmas', 4, 'Jl. Sukamaju No. 15', '0218899001'),
+(12, 'Klinik Pratama', 'Klinik', 5, 'Jl. Pratama No. 18', '0215566889'),
+(13, 'RS Jantung Sehat', 'Rumah Sakit', 9, 'Jl. Jantung No. 22', '0217766554'),
+(14, 'Puskesmas Citra', 'Puskesmas', 6, 'Jl. Citra No. 19', '0216677445'),
+(15, 'Klinik Utama', 'Klinik', 3, 'Jl. Utama No. 8', '0213344668'),
+(16, 'RS Bersalin Kasih', 'Rumah Sakit', 13, 'Jl. Kasih No. 20', '0219988221'),
+(17, 'Puskesmas Mulia', 'Puskesmas', 7, 'Jl. Mulia No. 10', '0218899333'),
+(18, 'Klinik Famili', 'Klinik', 4, 'Jl. Famili No. 17', '0215566772'),
+(19, 'RS Cipto Mangunkusumo', 'Rumah Sakit', 11, 'Jl. Cipto No. 25', '0213344556'),
+(20, 'Puskesmas Wijaya', 'Puskesmas', 8, 'Jl. Wijaya No. 21', '0216677888');
 
 INSERT INTO Peserta (id_peserta, Nama, Kelas, Status, Status_dalam_keluarga, Tanggal_lahir, id_faskes) VALUES
 (101, 'Budi Santoso', 'Kelas 1', 'Aktif', 'Kepala Keluarga', '1980-01-15', 1),
@@ -13,7 +26,21 @@ INSERT INTO Peserta (id_peserta, Nama, Kelas, Status, Status_dalam_keluarga, Tan
 (103, 'Adi Nugroho', 'Kelas 3', 'Aktif', 'Anak', '2005-05-10', 3),
 (104, 'Dewi Kusuma', 'Kelas 1', 'Aktif', 'Istri', '1981-03-25', 1),
 (105, 'Joko Widodo', 'Kelas 2', 'Nonaktif', 'Kepala Keluarga', '1975-04-17', 4),
-(106, 'Ratna Sari', 'Kelas 3', 'Aktif', 'Anak', '2007-07-22', 5);
+(106, 'Ratna Sari', 'Kelas 3', 'Aktif', 'Anak', '2007-07-22', 5),
+(107, 'Toni Kurniawan', 'Kelas 1', 'Aktif', 'Kepala Keluarga', '1983-09-12', 7),
+(108, 'Lia Sutrisno', 'Kelas 2', 'Nonaktif', 'Istri', '1985-11-25', 8),
+(109, 'Maya Lestari', 'Kelas 3', 'Aktif', 'Anak', '2008-02-17', 9),
+(110, 'Andi Pratama', 'Kelas 1', 'Aktif', 'Kepala Keluarga', '1978-05-30', 10),
+(111, 'Wulan Wijaya', 'Kelas 2', 'Nonaktif', 'Istri', '1984-07-14', 11),
+(112, 'Bambang Sugiarto', 'Kelas 3', 'Aktif', 'Anak', '2006-10-09', 12),
+(113, 'Ratih Kurniasih', 'Kelas 1', 'Aktif', 'Istri', '1981-08-19', 13),
+(114, 'Deni Nugroho', 'Kelas 2', 'Nonaktif', 'Kepala Keluarga', '1976-03-23', 14),
+(115, 'Sari Puspita', 'Kelas 3', 'Aktif', 'Anak', '2009-12-05', 15),
+(116, 'Yudi Setiawan', 'Kelas 1', 'Aktif', 'Kepala Keluarga', '1982-04-27', 16),
+(117, 'Rina Astuti', 'Kelas 2', 'Nonaktif', 'Istri', '1980-12-12', 17),
+(118, 'Rizki Fauzan', 'Kelas 3', 'Aktif', 'Anak', '2010-01-19', 18),
+(119, 'Susi Rahmawati', 'Kelas 1', 'Aktif', 'Kepala Keluarga', '1979-08-23', 19),
+(120, 'Hendra Wijaya', 'Kelas 2', 'Nonaktif', 'Suami', '1983-07-30', 20);
 
 INSERT INTO Antrian (Kode_Antiran, Tanggal_daftar, Keluhan, id_faskes, id_peserta) VALUES
 (1001, '2024-06-01', 'Demam', 1, 101),
@@ -21,7 +48,21 @@ INSERT INTO Antrian (Kode_Antiran, Tanggal_daftar, Keluhan, id_faskes, id_pesert
 (1003, '2024-06-05', 'Pusing', 3, 103),
 (1004, '2024-06-07', 'Mual', 1, 104),
 (1005, '2024-06-09', 'Diare', 4, 105),
-(1006, '2024-06-11', 'Flu', 5, 106);
+(1006, '2024-06-11', 'Flu', 5, 106),
+(1007, '2024-06-13', 'Sakit Kepala', 1, 107),
+(1008, '2024-06-14', 'Sakit Perut', 2, 108),
+(1009, '2024-06-15', 'Demam', 3, 109),
+(1010, '2024-06-16', 'Batuk', 4, 110),
+(1011, '2024-06-17', 'Pilek', 5, 111),
+(1012, '2024-06-18', 'Luka Ringan', 6, 112),
+(1013, '2024-06-19', 'Sesak Napas', 7, 113),
+(1014, '2024-06-20', 'Diare', 8, 114),
+(1015, '2024-06-21', 'Mual', 9, 115),
+(1016, '2024-06-22', 'Nyeri Sendi', 10, 116),
+(1017, '2024-06-23', 'Demam', 11, 117),
+(1018, '2024-06-24', 'Batuk', 12, 118),
+(1019, '2024-06-25', 'Pilek', 13, 119),
+(1020, '2024-06-26', 'Sakit Kepala', 14, 120);
 
 INSERT INTO Pelayanan (ID_pelayanan, Tanggal_periksa, Review_star, Diagnosa, Terapi, id_faskes, id_peserta) VALUES
 (2001, '2024-06-02', 4, 'Infeksi Saluran Pernapasan', 'Antibiotik', 1, 101),
@@ -29,8 +70,21 @@ INSERT INTO Pelayanan (ID_pelayanan, Tanggal_periksa, Review_star, Diagnosa, Ter
 (2003, '2024-06-06', 3, 'Migrain', 'Analgesik', 3, 103),
 (2004, '2024-06-08', 4, 'Gastritis', 'Antasida', 1, 104),
 (2005, '2024-06-10', 5, 'Diare Akut', 'Oralit', 4, 105),
-(2006, '2024-06-12', 4, 'Flu Berat', 'Antivirus', 5, 106);
-
+(2006, '2024-06-12', 4, 'Flu Berat', 'Antivirus', 5, 106),
+(2007, '2024-06-13', 4, 'Sakit Kepala', 'Parasetamol', 1, 107),
+(2008, '2024-06-14', 3, 'Sakit Perut', 'Antasida', 2, 108),
+(2009, '2024-06-15', 5, 'Demam', 'Parasetamol', 3, 109),
+(2010, '2024-06-16', 4, 'Batuk', 'Ekspektoran', 4, 110),
+(2011, '2024-06-17', 3, 'Pilek', 'Dekongestan', 5, 111),
+(2012, '2024-06-18', 5, 'Luka Ringan', 'Antiseptik', 6, 112),
+(2013, '2024-06-19', 4, 'Sesak Napas', 'Inhaler', 7, 113),
+(2014, '2024-06-20', 4, 'Diare', 'Oralit', 8, 114),
+(2015, '2024-06-21', 5, 'Mual', 'Antiemetik', 9, 115),
+(2016, '2024-06-22', 3, 'Nyeri Sendi', 'Analgesik', 10, 116),
+(2017, '2024-06-23', 4, 'Demam', 'Parasetamol', 11, 117),
+(2018, '2024-06-24', 3, 'Batuk', 'Ekspektoran', 12, 118),
+(2019, '2024-06-25', 5, 'Pilek', 'Dekongestan', 13, 119),
+(2020, '2024-06-26', 4, 'Sakit Kepala', 'Parasetamol', 14, 120);
 
 INSERT INTO Pembayaran_Iuran (ID_pembayaran, Jumlah_pembayaran, Channel_bank, Tanggal_bayar, Status_pembayaran_lunas, id_peserta) VALUES
 (3001, 150000.00, 'Bank Mandiri', '2024-05-31', TRUE, 101),
@@ -38,7 +92,21 @@ INSERT INTO Pembayaran_Iuran (ID_pembayaran, Jumlah_pembayaran, Channel_bank, Ta
 (3003, 75000.00, 'Bank BNI', '2024-06-02', TRUE, 103),
 (3004, 200000.00, 'Bank BCA', '2024-06-03', TRUE, 104),
 (3005, 120000.00, 'Bank Danamon', '2024-06-04', FALSE, 105),
-(3006, 90000.00, 'Bank CIMB', '2024-06-05', TRUE, 106);
+(3006, 90000.00, 'Bank CIMB', '2024-06-05', TRUE, 106),
+(3007, 150000.00, 'Bank Mandiri', '2024-06-06', TRUE, 107),
+(3008, 100000.00, 'Bank BRI', '2024-06-07', FALSE, 108),
+(3009, 75000.00, 'Bank BNI', '2024-06-08', TRUE, 109),
+(3010, 200000.00, 'Bank BCA', '2024-06-09', TRUE, 110),
+(3011, 120000.00, 'Bank Danamon', '2024-06-10', FALSE, 111),
+(3012, 90000.00, 'Bank CIMB', '2024-06-11', TRUE, 112),
+(3013, 150000.00, 'Bank Mandiri', '2024-06-12', TRUE, 113),
+(3014, 100000.00, 'Bank BRI', '2024-06-13', FALSE, 114),
+(3015, 75000.00, 'Bank BNI', '2024-06-14', TRUE, 115),
+(3016, 200000.00, 'Bank BCA', '2024-06-15', TRUE, 116),
+(3017, 150000.00, 'Bank Mandiri', '2024-06-16', TRUE, 117),
+(3018, 100000.00, 'Bank BRI', '2024-06-17', FALSE, 118),
+(3019, 75000.00, 'Bank BNI', '2024-06-18', TRUE, 119),
+(3020, 200000.00, 'Bank BCA', '2024-06-19', TRUE, 120);
 
 
 INSERT INTO Jadwal_Operasi (Kode_Operasi, Jadwal_pelaksanaan, ID_faskes, Tenaga_kesehatan, Bidang_Spesialis, id_peserta) VALUES
@@ -47,17 +115,40 @@ INSERT INTO Jadwal_Operasi (Kode_Operasi, Jadwal_pelaksanaan, ID_faskes, Tenaga_
 (4003, '2024-06-14', 3, 'Dr. Mahendra', 'Pediatri', 103),
 (4004, '2024-06-16', 1, 'Dr. Budi', 'Kardiologi', 104),
 (4005, '2024-06-18', 4, 'Dr. Susilo', 'Ortopedi', 105),
-(4006, '2024-06-20', 5, 'Dr. Sari', 'Dermatologi', 106);
+(4006, '2024-06-20', 5, 'Dr. Sari', 'Dermatologi', 106),
+(4007, '2024-06-21', 1, 'Dr. Sutrisno', 'Bedah Umum', 107),
+(4008, '2024-06-23', 2, 'Dr. Lestari', 'Ginekologi', 108),
+(4009, '2024-06-25', 3, 'Dr. Mahendra', 'Pediatri', 109),
+(4010, '2024-06-27', 4, 'Dr. Budi', 'Kardiologi', 110),
+(4011, '2024-06-29', 5, 'Dr. Susilo', 'Ortopedi', 111),
+(4012, '2024-07-01', 6, 'Dr. Sari', 'Dermatologi', 112),
+(4013, '2024-07-03', 7, 'Dr. Sutrisno', 'Bedah Umum', 113),
+(4014, '2024-07-05', 8, 'Dr. Lestari', 'Ginekologi', 114),
+(4015, '2024-07-07', 9, 'Dr. Mahendra', 'Pediatri', 115),
+(4016, '2024-07-09', 10, 'Dr. Budi', 'Kardiologi', 116),
+(4017, '2024-07-11', 11, 'Dr. Susilo', 'Ortopedi', 117),
+(4018, '2024-07-13', 12, 'Dr. Sari', 'Dermatologi', 118),
+(4019, '2024-07-15', 13, 'Dr. Sutrisno', 'Bedah Umum', 119),
+(4020, '2024-07-17', 14, 'Dr. Lestari', 'Ginekologi', 120);
 
-
-INSERT INTO Tempat_tidur (ID_kamar, Tipe_kamar, Status_ketersediaan, Last_update, id_faskes) VALUES
-(5001, 'VIP', TRUE, '2024-06-01', 1),
-(5002, 'Kelas 1', FALSE, '2024-06-02', 1),
-(5003, 'Kelas 2', TRUE, '2024-06-01', 2),
-(5004, 'Kelas 3', FALSE, '2024-06-03', 2),
-(5005, 'Kelas 1', TRUE, '2024-06-01', 3),
-(5006, 'Kelas 3', TRUE, '2024-06-02', 3),
-(5007, 'Kelas 2', FALSE, '2024-06-04', 4),
-(5008, 'Kelas 3', TRUE, '2024-06-05', 5),
-(5009, 'VIP', FALSE, '2024-06-06', 6),
-(5010, 'Kelas 1', TRUE, '2024-06-07', 6);
+INSERT INTO tempat_tidur (ID_kamar, Tipe_kamar, Status_ketersediaan, Last_update, id_faskes) VALUES
+(110, 'VIP', TRUE, '2024-06-13', 1),
+(120, 'Standard', FALSE, '2024-06-13', 2),
+(130, 'Ekonomi', TRUE, '2024-06-13', 3),
+(140, 'VIP', FALSE, '2024-06-13', 4),
+(150, 'Standard', TRUE, '2024-06-13', 5),
+(210, 'Ekonomi', FALSE, '2024-06-13', 6),
+(220, 'VIP', TRUE, '2024-06-13', 1),
+(230, 'Standard', FALSE, '2024-06-13', 2),
+(240, 'Ekonomi', TRUE, '2024-06-13', 3),
+(250, 'VIP', FALSE, '2024-06-13', 4),
+(310, 'Standard', TRUE, '2024-06-13', 5),
+(320, 'Ekonomi', FALSE, '2024-06-13', 6),
+(330, 'VIP', TRUE, '2024-06-13', 1),
+(340, 'Standard', FALSE, '2024-06-13', 2),
+(350, 'Ekonomi', TRUE, '2024-06-13', 3),
+(410, 'VIP', FALSE, '2024-06-13', 4),
+(420, 'Standard', TRUE, '2024-06-13', 5),
+(430, 'Ekonomi', FALSE, '2024-06-13', 6),
+(440, 'VIP', TRUE, '2024-06-13', 1),
+(450, 'Standard', FALSE, '2024-06-13', 2);	
