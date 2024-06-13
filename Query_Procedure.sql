@@ -106,3 +106,55 @@ DELIMITER ;
 
 CALL TampilkanJadwalOperasiFaskes(1);
 
+--------------------------------------------------
+-- procedure untuk menambah antrean
+
+DELIMITER //
+
+CREATE PROCEDURE TambahAntrean(
+    IN p_id_faskes INT,
+    IN p_id_peserta INT,
+    IN p_keluhan TEXT
+)
+BEGIN
+    DECLARE kode_antrian INT;
+    DECLARE peserta_ada INT;
+    DECLARE faskes_ada INT;
+    DECLARE pesan_error VARCHAR(255);
+
+    -- Check if the participant exists
+    SELECT COUNT(*) INTO peserta_ada 
+    FROM Peserta 
+    WHERE id_peserta = p_id_peserta;
+
+    -- If participant does not exist, set error message
+    IF peserta_ada = 0 THEN
+        SET pesan_error = 'Nama peserta tidak terdaftar';
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = pesan_error;
+    END IF;
+
+    -- Check if the healthcare facility exists
+    SELECT COUNT(*) INTO faskes_ada 
+    FROM Faskes 
+    WHERE id_faskes = p_id_faskes;
+
+    -- If healthcare facility does not exist, set error message
+    IF faskes_ada = 0 THEN
+        SET pesan_error = 'Nama faskes tidak ada';
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = pesan_error;
+    END IF;
+
+    -- If both participant and healthcare facility exist, proceed to insert
+    IF peserta_ada > 0 AND faskes_ada > 0 THEN
+        -- Calculate the next kode_antrian (auto-increment simulation)
+        SELECT IFNULL(MAX(Kode_Antiran), 0) + 1 INTO kode_antrian FROM Antrian;
+
+        -- Insert the new row into the Antrian table
+        INSERT INTO Antrian (Kode_Antiran, Tanggal_daftar, Keluhan, id_faskes, id_peserta)
+        VALUES (kode_antrian, NOW(), p_keluhan, p_id_faskes, p_id_peserta);
+    END IF;
+END //
+
+DELIMITER ;
+
+
