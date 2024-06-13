@@ -1,0 +1,17 @@
+CREATE FUNCTION total_tagihan_belum_lunas()
+RETURNS DECIMAL(10, 2)
+BEGIN
+    DECLARE total DECIMAL(10, 2);
+
+    SELECT SUM(Jumlah_pembayaran)
+    INTO total
+    FROM Pembayaran_Iuran
+    WHERE Status_pembayaran_lunas = FALSE;
+
+ 
+    IF total IS NULL THEN
+        SET total = 0.00; 
+    END IF;
+
+    RETURN total;
+END;
