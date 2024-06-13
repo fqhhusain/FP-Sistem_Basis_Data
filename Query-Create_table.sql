@@ -14,10 +14,12 @@ CREATE TABLE Peserta (
     Nama VARCHAR(255),
     Kelas VARCHAR(50),
     Status VARCHAR(50),
+    Status_dalam_keluarga VARCHAR(50),
     Tanggal_lahir DATE,
-    id_faskes INT,      
+    id_faskes INT,
     FOREIGN KEY (id_faskes) REFERENCES Faskes(id_faskes)
 );
+
 
 -- Creating table Antrian
 CREATE TABLE Antrian (
