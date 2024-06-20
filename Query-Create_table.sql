@@ -77,3 +77,17 @@ CREATE TABLE Tempat_tidur (
     id_faskes INT,
     FOREIGN KEY (id_faskes) REFERENCES Faskes(id_faskes)
 );
+
+-- Creating table log_peserta
+CREATE TABLE Peserta_log (
+    id_log INT AUTO_INCREMENT PRIMARY KEY,
+    id_peserta INT,
+    Nama VARCHAR(100),
+    Kelas VARCHAR(50),
+    Status VARCHAR(50),
+    Status_dalam_keluarga VARCHAR(50),
+    Tanggal_lahir DATE,
+    id_faskes INT,
+    Action_type VARCHAR(10),
+    Action_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
