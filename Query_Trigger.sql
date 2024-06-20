@@ -40,3 +40,20 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+
+------Contoh Eksekusi----------
+-- Menambahkan data baru ke tabel Peserta
+"INSERT INTO Peserta (id_peserta, Nama, Kelas, Status, Status_dalam_keluarga, Tanggal_lahir, id_faskes)
+VALUES (1, 'John Doe', 'A', 'Aktif', 'Kepala Keluarga', '1990-05-15', 1);"
+
+"-- Mengubah data pada tabel Peserta
+UPDATE Peserta
+SET Status = 'Tidak Aktif'
+WHERE id_peserta = 1;"
+
+"-- Menghapus data dari tabel Peserta
+DELETE FROM Peserta
+WHERE id_peserta = 1;"
+
+"SELECT * FROM Peserta_log;"
