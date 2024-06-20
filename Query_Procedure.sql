@@ -9,8 +9,7 @@ CREATE PROCEDURE TampilkanFaskesByTipe(
 BEGIN
     SELECT * 
     FROM Faskes 
-    WHERE Tipe_fasilitas = p_tipe_fasilitas
-    ORDER BY Jarak ASC;
+    WHERE Tipe_fasilitas = p_tipe_fasilitas;
 END //
 
 DELIMITER ;
