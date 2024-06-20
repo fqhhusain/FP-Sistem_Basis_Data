@@ -91,3 +91,19 @@ CREATE TABLE Peserta_log (
     Action_type VARCHAR(10),
     Action_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE Tenaga_Kesehatan (
+    ID_Tenaga_Medis INT PRIMARY KEY,
+    Nama_Tenaga_Kesehatan VARCHAR(100),
+    ID_faskes INT,
+    Bidang_Spesialis VARCHAR(100),
+    FOREIGN KEY (id_faskes) REFERENCES faskes(id_faskes)
+);
+
+CREATE TABLE Jadwal_praktik (
+    Id_Jadwal_Praktik INT PRIMARY KEY,
+    ID_tenaga_medis INT,
+    Waktu_mulai TIME,
+    Waktu_selesai TIME,
+    FOREIGN KEY (ID_tenaga_medis) REFERENCES Tenaga_Kesehatan(ID_Tenaga_Medis)
+);
